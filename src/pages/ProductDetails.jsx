@@ -4,18 +4,18 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { useParams } from "react-router-dom";
 
-const MenShirtsDetails = () => {
+const ProductDetails = () => {
   const { data, loading, error } = useFetch(
-    "https://9d335446-e3c0-4c59-bc08-2ec666aae52c-00-9hvgatjrazml.sisko.replit.dev/shirts"
+    "https://ff4e841b-09cb-4517-8b1e-23051206f851-00-4c03amsdunal.pike.replit.dev/products"
   );
-  const { shirtID } = useParams();
+  const { productID } = useParams();
 
   if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error loading shirt details.</p>;
+  if (error) return <p>Error loading product details.</p>;
 
-  const selectedShirt = data?.find((shirts) => shirts._id === shirtID);
+  const selectedProduct = data?.find((products) => products._id === productID);
 
-  if (!selectedShirt) return <p>Shirt not found.</p>;
+  if (!selectedProduct) return <p>Product not found.</p>;
 
   return (
     <div className="d-flex flex-column min-vh-100">
@@ -25,7 +25,7 @@ const MenShirtsDetails = () => {
           {/* Image Section */}
           <div className="col-md-6 d-flex justify-content-center align-items-center">
             <img
-              src={selectedShirt.shirtImage}
+              src={selectedProduct.productImage}
               alt="Shirt"
               className="img-fluid rounded"
               style={{ maxHeight: "400px" }}
@@ -34,20 +34,22 @@ const MenShirtsDetails = () => {
 
           {/* Product Details Section */}
           <div className="col-md-6">
-            <h2 className="fw-bold">{selectedShirt.shirtBrand}</h2>
-            <p className="text-muted">{selectedShirt.shirtName}</p>
-            <p className="text-success">4.5 ★ 69 Ratings</p>
+            <h2 className="fw-bold">{selectedProduct.productBrandName}</h2>
+            <p className="text-muted">{selectedProduct.productName}</p>
+            <p className="text-success">{selectedProduct.productRating}</p>
+            <p className="text-muted">{selectedProduct.productDescription}</p>
+             <p className="text-muted">{selectedProduct.productReturnPolicy}</p>
             <h3 className="text-primary">
-              ₹{selectedShirt.shirtPrice}{" "}
+             
               <span className="text-muted text-decoration-line-through">
-                ₹1999
+                 ₹{selectedProduct.productPrice}{" "}
               </span>{" "}
-              <span className="text-success">(71% OFF)</span>
+              <span className="text-success">₹{selectedProduct.productDiscountedPrice}{" "}</span>
             </h3>
             <p className="text-muted">inclusive of all taxes</p>
-
+          
             {/* Size Selector */}
-            <h5>Select Size</h5>
+            {/* <h5>Select Size</h5>
             <div className="d-flex gap-2 mb-3">
               {[38, 40, 42, 44, 46].map((size, index) => (
                 <button
@@ -60,16 +62,16 @@ const MenShirtsDetails = () => {
                   {size}
                 </button>
               ))}
-            </div>
+            </div> */}
 
             {/* Add to Bag and Wishlist */}
             <div className="d-flex gap-3">
-              <button className="btn btn-primary w-50">ADD TO BAG</button>
+              <button className="btn btn-primary w-50">ADD TO CART</button>
               <button className="btn btn-outline-dark w-50">WISHLIST</button>
             </div>
 
             {/* Delivery Options */}
-            <div className="mt-4">
+            {/* <div className="mt-4">
               <h5>Delivery Options</h5>
               <input
                 type="text"
@@ -81,7 +83,7 @@ const MenShirtsDetails = () => {
                 Enter pincode to check delivery time & Pay on Delivery
                 Availability
               </p>
-            </div>
+            </div> */}
           </div>
         </div>
       </main>
@@ -90,7 +92,7 @@ const MenShirtsDetails = () => {
   );
 };
 
-export default MenShirtsDetails;
+export default ProductDetails;
 
 
 

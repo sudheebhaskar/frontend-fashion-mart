@@ -2,36 +2,21 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import MenShirts from './pages/MenShirts'
-import MenShirtsDetails from './pages/MenShirtsDetails'
-import Cart from './pages/Cart'
-import TravelBags from './pages/TravelBags'
-import TravelBagsDetails from "./pages/TravelBagsDetails"
-	
+import Products from './pages/Products'
+import ProductDetails from './pages/ProductDetails'
+
 const  router = createBrowserRouter([
 	{
 		path: "/",
 		element: <App />
 	},
 	{
-		path: "/shirts",
-		element: <MenShirts />
+		path: "/products",
+		element: <Products />
 	},
 	{
-		path: "/shirts/:shirtID",
-		element: <MenShirtsDetails />
-	},
-	{
-		path: "/cart",
-		element: <Cart />
-	},
-	{
-		path: "/travelBags",
-		element: <TravelBags />
-	},
-	{
-		path: "/travelBags/:bagID",
-		element: <TravelBagsDetails />
+		path: "/products/:productID",
+		element: <ProductDetails />
 	}
 ])
 

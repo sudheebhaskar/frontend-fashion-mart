@@ -14,12 +14,12 @@ const Header = () => {
               <a href="/" className="btn btn-outline-primary me-2 px-2">
                 Home
               </a>
-              <a href="/shirts" className="btn btn-outline-primary me-2 px-2">
-                Shirts
+              <a href="/products" className="btn btn-outline-primary me-2 px-2">
+                Products
               </a>
-              <a href="/travelBags" className="btn btn-outline-primary px-2">
+              {/* <a href="/travelBags" className="btn btn-outline-primary px-2">
                 Travel Bags
-              </a>
+              </a> */}
             </nav>
           </div>
 

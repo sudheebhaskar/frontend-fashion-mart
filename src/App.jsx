@@ -3,8 +3,8 @@ import "bootstrap/dist/js/bootstrap.js";
 import { Link } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import MenShirts from './pages/MenShirts';
-import TravelBags from './pages/TravelBags';
+import Products from './pages/Products';
+
 
 
 export default function App() {
