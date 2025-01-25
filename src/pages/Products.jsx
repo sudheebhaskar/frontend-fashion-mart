@@ -9,6 +9,8 @@ const Products = () => {
     "https://backend-fashion-mart.vercel.app/products"
   );
 
+  
+
   const [selectedCategory, setSelectedCategory] = useState({ men: true, women: true });
   const [sortOrder, setSortOrder] = useState("none");
   const [minRating, setMinRating] = useState(0);
