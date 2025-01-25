@@ -6,7 +6,7 @@ import { useParams } from "react-router-dom";
 
 const ProductDetails = () => {
   const { data, loading, error } = useFetch(
-    "https://867a34fb-9155-49e5-b976-c83ecbb5f089-00-11pmu6k4u7u30.sisko.replit.dev/products"
+    "https://backend-fashion-mart.vercel.app/products"
   );
   const { productID } = useParams();
 
