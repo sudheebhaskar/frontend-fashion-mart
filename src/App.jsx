@@ -53,16 +53,16 @@ export default function App() {
               <div className="carousel-item h-100">
                 <Link to="/travelbags">
                   <img
-                    src="https://res.cloudinary.com/djain1xja/image/upload/v1732457734/travel-bag-4326732_1280_qe2xtb.jpg"
+                    src="https://res.cloudinary.com/djain1xja/image/upload/v1737909240/HD-wallpaper-silk-saree-boutiques-in-chennai-soft-silk-sarees-buy-online-the-s-studio-soft-silk-sarees-with-price-soft-silk-saree-online-shopping-soft-silk-sarees-buy-online-soft-silk-sarees-online_mczys0.jpg"
                     className="d-block w-100 h-100"
-                    alt="Travel Bags"
+                    alt="Sarees"
                     style={{ objectFit: "cover" }}
                   />
                 </Link>
                 <div className="carousel-caption d-none d-md-block">
-                  <h5 className="display-4 fw-bold text-light">Travel Bags</h5>
+                  <h5 className="display-4 fw-bold text-light">Sarees</h5>
                   <p className="fs-5 text-light">
-                    Discover durable and stylish travel companions for your adventures.
+                    Discover new and trendy saree collections.
                   </p>
                 </div>
               </div>
