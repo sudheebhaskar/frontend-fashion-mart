@@ -205,7 +205,7 @@ const Products = () => {
                             className="btn btn-primary"
                             to={`/products/${product._id}`}
                           >
-                            More info
+                            View Details
                           </Link>
                           <Link className="btn btn-secondary" to="/CartPage">
                             Add to Cart
