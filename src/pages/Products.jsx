@@ -177,7 +177,6 @@ const Products = () => {
               </button>
             </div>
 
-            {/* Products Section */}
             <div className="col-md-9">
               {!loading && <h5 className="mb-4">Showing {filteredProducts?.length || 0} Products</h5>}
               <div className="row">
@@ -207,7 +206,7 @@ const Products = () => {
                           >
                             View Details
                           </Link>
-                          <Link className="btn btn-secondary" to="/CartPage">
+                          <Link className="btn btn-secondary" to="/cart">
                             Add to Cart
                           </Link>
                         </div>

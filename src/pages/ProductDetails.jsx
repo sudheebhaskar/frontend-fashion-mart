@@ -22,7 +22,7 @@ const ProductDetails = () => {
       <Header />
       <main className="flex-grow-1 container my-4">
         <div className="row align-items-center g-3">
-          {/* Image Section */}
+         
           <div className="col-md-6 d-flex justify-content-center align-items-center">
             <img
               src={selectedProduct.productImage}
@@ -32,7 +32,7 @@ const ProductDetails = () => {
             />
           </div>
 
-          {/* Product Details Section */}
+          
           <div className="col-md-6">
             <h2 className="fw-bold">{selectedProduct.productBrandName}</h2>
             <p className="text-muted">{selectedProduct.productName}</p>
@@ -64,7 +64,7 @@ const ProductDetails = () => {
               ))}
             </div> */}
 
-            {/* Add to Bag and Wishlist */}
+           
             <div className="d-flex gap-3">
               <button className="btn btn-primary w-50">ADD TO CART</button>
               <button className="btn btn-outline-dark w-50">WISHLIST</button>
