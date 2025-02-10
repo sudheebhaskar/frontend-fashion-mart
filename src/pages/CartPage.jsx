@@ -176,7 +176,7 @@ const CartPage = () => {
                   <p className="card-text">Total: ₹{calculateTotal()}</p>
                   <button 
                     className="btn btn-primary w-100"
-                    onClick={() => toast.info('Checkout functionality coming soon!')}
+                    onClick={() => toast.info('Checkout functionality will be added')}
                   >
                     Proceed to Checkout
                   </button>
