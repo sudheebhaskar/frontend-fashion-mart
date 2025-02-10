@@ -17,16 +17,14 @@ const Header = () => {
               <a href="/products" className="btn btn-outline-primary me-2 px-2">
                 Products
               </a>
-              {/* <a href="/travelBags" className="btn btn-outline-primary px-2">
-                Travel Bags
-              </a> */}
+             
             </nav>
           </div>
 
          
           <div className="d-flex align-items-center">
-            <a className="btn btn-success me-2 d-flex align-items-center" href="/cart">
-              <i className="bi bi-cart me-2">Cart</i>
+            <a className="btn btn-success me-2 d-flex align-items-center" href="/cartpage">
+              <i className="bi bi-cart me-2">CartPage</i>
             </a>
             <a className="btn btn-success d-flex align-items-center" href="/wishlist">
               <i className="bi bi-heart me-2">Wishlist</i>
