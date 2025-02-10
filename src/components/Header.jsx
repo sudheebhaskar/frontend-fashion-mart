@@ -24,7 +24,7 @@ const Header = () => {
          
           <div className="d-flex align-items-center">
             <a className="btn btn-success me-2 d-flex align-items-center" href="/cartpage">
-              <i className="bi bi-cart me-2">CartPage</i>
+              <i className="bi bi-cart me-2">Cart</i>
             </a>
             <a className="btn btn-success d-flex align-items-center" href="/wishlist">
               <i className="bi bi-heart me-2">Wishlist</i>
