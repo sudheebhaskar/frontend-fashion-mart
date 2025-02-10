@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import React from 'react'
 import { useParams, Link } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -15,14 +16,14 @@ const ProductDetails = () => {
 
 
   // const { data, loading, error } = useFetch(
-  //   "https://backend-fashion-mart.vercel.app/products"
+    //"https://backend-fashion-mart.vercel.app/products"
   //  );
 
   // Fetch product details
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const response = await fetch("https://eb89fe42-efa8-4e85-8537-c611a7582df7-00-a3eag0wnvdb5.pike.replit.dev/products");
+        const response = await fetch("https://backend-fashion-mart.vercel.app/products");
         if (response.ok) {
           const products = await response.json();
           const foundProduct = products.find(p => p._id === productId);
@@ -50,7 +51,7 @@ const ProductDetails = () => {
     const checkWishlist = async () => {
       try {
         const userId = "temp-user-1";
-        const response = await fetch(`https://eb89fe42-efa8-4e85-8537-c611a7582df7-00-a3eag0wnvdb5.pike.replit.dev/wishlist/${userId}`);
+        const response = await fetch(`https://backend-fashion-mart.vercel.app/wishlist/${userId}`);
         if (response.ok) {
           const data = await response.json();
           setIsWishlisted(data.products.some(item => item._id === productId));
@@ -68,7 +69,7 @@ const ProductDetails = () => {
     try {
       const userId = "temp-user-1";
       const endpoint = isWishlisted ? 'remove' : 'add';
-      const response = await fetch(`https://eb89fe42-efa8-4e85-8537-c611a7582df7-00-a3eag0wnvdb5.pike.replit.dev/wishlist/${endpoint}`, {
+      const response = await fetch(`https://backend-fashion-mart.vercel.app/wishlist/${endpoint}`, {
         method: isWishlisted ? 'DELETE' : 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -97,7 +98,7 @@ const ProductDetails = () => {
       }
 
       const userId = "temp-user-1";
-      const response = await fetch('https://eb89fe42-efa8-4e85-8537-c611a7582df7-00-a3eag0wnvdb5.pike.replit.dev/cartpage/add', {
+      const response = await fetch('https://backend-fashion-mart.vercel.app/cartpage/add', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
